@@ -26,3 +26,19 @@ const getUser2 = (uid: string) => ({
 
 console.log(getUser());
 console.log(getUser2("ABS-124"));
+
+const heroes = [
+  {
+    id: 1,
+    name: "Batman",
+  },
+  {
+    id: 2,
+    name: "Superman",
+    power: "Super strong",
+  },
+];
+
+const hero = heroes.find((hero) => hero.id === 2);
+
+console.log(hero?.power?.toUpperCase());
