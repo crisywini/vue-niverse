@@ -8,3 +8,5 @@ numberArray2.push("7");
 
 console.log(numberArray);
 console.log(numberArray2);
+
+export {};
