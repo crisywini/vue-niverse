@@ -16,7 +16,7 @@ new Promise((resolve, reject) => {
 console.log("Fin");*/
 
 import { getHeroById } from "./07-imp-exp";
-import { Hero } from "./data/heroes";
+import { Hero } from "../data/heroes";
 
 const getHeroByIdAsync = (id: number): Promise<Hero> => {
   return new Promise((resolve, reject) => {
