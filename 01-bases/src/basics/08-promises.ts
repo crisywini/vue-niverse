@@ -1,4 +1,4 @@
-console.log("Start");
+/*console.log("Start");
 
 new Promise((resolve, reject) => {
   //console.log("Body promise");
@@ -13,4 +13,21 @@ new Promise((resolve, reject) => {
   .catch((errorMessage) => console.log(errorMessage))
   .finally(() => console.log("Promise finished"));
 
-console.log("Fin");
+console.log("Fin");*/
+
+import { getHeroById } from "./07-imp-exp";
+import { Hero } from "./data/heroes";
+
+const getHeroByIdAsync = (id: number): Promise<Hero> => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const hero = getHeroById(id);
+
+      hero ? resolve(hero) : reject(`Hero with id ${id} was not found`);
+    }, 1000);
+  });
+};
+
+getHeroByIdAsync(3)
+  .then((hero) => console.log(hero.name))
+  .catch(alert);

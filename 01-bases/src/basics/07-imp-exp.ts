@@ -4,10 +4,10 @@ export const getHeroById = (id: number) => {
   return heroes.find((hero) => hero.id === id) ?? {};
 };
 
-console.log(getHeroById(1));
+//console.log(getHeroById(1));
 
 export const getHerosByOwner = (owner: Owner) => {
   return heroes.filter((hero) => hero.owner === owner) ?? [{}];
 };
 
-console.log(getHerosByOwner("DC"));
+//console.log(getHerosByOwner("DC"));
