@@ -1,9 +1,10 @@
 import "./style.css";
 import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
-import "./basics/01-const-let";
-import "./basics/02-object";
-import "./basics/03-arrays";
+//import "./basics/01-const-let";
+//import "./basics/02-object";
+//import "./basics/03-arrays";
+import "./basics/04-functions";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
