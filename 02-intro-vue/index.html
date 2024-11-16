@@ -7,14 +7,18 @@
   </head>
   <body>
     <div id="myApp">
-      <h1>Batman Quotes</h1>
+      <h1>Batman Quotes {{totalQuotes}}</h1>
+      <input type="text" placeholder="Add quote" @keypress.enter="addQuote" />
+      <br />
       <button @click="changeShowAuthorState">{{buttonMessage}}</button>
+      <button @click="addQuote">Add quote</button>
+
       <hr />
 
       <ul>
-        <li v-for="({quote, author}, index) in quotes">
+        <li v-for="({quote, author}, index) in reactiveQuotes">
           <span>{{index+1}} - {{quote}}</span>
-          <blockquote v-if="showAuthor">{{author}}</blockquote>
+          <blockquote v-show="showAuthor">{{author}}</blockquote>
         </li>
       </ul>
     </div>

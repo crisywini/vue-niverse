@@ -1,5 +1,5 @@
 
-const {createApp, ref} = Vue;
+const {createApp, ref, computed} = Vue;
 
 const quotes = [
     { quote: "The night is darkest just before the dawn. And I promise you, the dawn is coming.", author: "Harvey Dent, The Dark Knight" },
@@ -20,13 +20,30 @@ const app = createApp(
 
         const showAuthor = ref(true);
         const buttonMessage = ref('Show Author');
+        const reactiveQuotes = ref(quotes);
+        const totalQuotes = computed(()=> {
+            return reactiveQuotes.value.length;
+        });
+        
 
         const changeShowAuthorState = () => {
             showAuthor.value = showAuthor.value === true ? false : true;
             buttonMessage.value = showAuthor.value === true ? 'Hide Author' : 'Show Author';
         };
 
-        return {quotes, showAuthor, changeShowAuthorState, buttonMessage};
+
+        const addQuote = () => {
+            reactiveQuotes.value.unshift({quote: 'The simple of life can be the wildest for some', author: "Crisi"});
+        };
+
+        return {
+            reactiveQuotes, 
+            showAuthor, 
+            changeShowAuthorState, 
+            buttonMessage,
+            addQuote,
+            totalQuotes
+        };
 
     }
 });
