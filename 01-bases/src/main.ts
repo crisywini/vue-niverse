@@ -10,7 +10,8 @@ import viteLogo from "/vite.svg";
 //import "./basics/07-imp-exp";
 //import "./basics/08-promises";
 //import "./basics/09-fetch-api";
-import "./basics/10-axios";
+//import "./basics/10-axios";
+import "./basics/11-async-await";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>

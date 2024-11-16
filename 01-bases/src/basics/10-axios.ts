@@ -12,7 +12,9 @@ export const giphyAPI = axios.create({
 
 //export default giphyAPI;
 
+/*
 giphyAPI
   .get<GIFResponse>("random")
   .then((resp) => console.log(resp.data.data.images.fixed_height))
   .catch((error) => console.info(error));
+*/
