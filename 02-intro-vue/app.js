@@ -18,7 +18,15 @@ const app = createApp(
 
     setup() {
 
-        return {quotes};
+        const showAuthor = ref(true);
+        const buttonMessage = ref('Show Author');
+
+        const changeShowAuthorState = () => {
+            showAuthor.value = showAuthor.value === true ? false : true;
+            buttonMessage.value = showAuthor.value === true ? 'Hide Author' : 'Show Author';
+        };
+
+        return {quotes, showAuthor, changeShowAuthorState, buttonMessage};
 
     }
 });
