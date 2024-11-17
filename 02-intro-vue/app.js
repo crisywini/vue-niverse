@@ -24,6 +24,8 @@ const app = createApp(
         const totalQuotes = computed(()=> {
             return reactiveQuotes.value.length;
         });
+
+        const newMessage = ref('');
         
 
         const changeShowAuthorState = () => {
@@ -33,7 +35,8 @@ const app = createApp(
 
 
         const addQuote = () => {
-            reactiveQuotes.value.unshift({quote: 'The simple of life can be the wildest for some', author: "Crisi"});
+            //reactiveQuotes.value.unshift({quote: 'The simple of life can be the wildest for some', author: "Crisi"});
+            reactiveQuotes.value.unshift({quote: newMessage.value, author: "Crisi"});
         };
 
         return {
@@ -42,7 +45,8 @@ const app = createApp(
             changeShowAuthorState, 
             buttonMessage,
             addQuote,
-            totalQuotes
+            totalQuotes, 
+            newMessage
         };
 
     }
