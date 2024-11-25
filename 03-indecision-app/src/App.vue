@@ -2,8 +2,8 @@
     <h1>First App</h1>
     <hr/>
 
-    <Counter></Counter>
-    <SignUp></SignUp>
+    <Counter :value="10"/>
+    <!--<SignUp></SignUp> -->
 </template>
 
 <script lang="ts" setup>
