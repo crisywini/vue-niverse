@@ -1,35 +1,15 @@
 <template>
-    <h1>Hello World</h1>
-    <section>
+    <h1>First App</h1>
+    <hr/>
 
-        <h3>Counter: {{ counter }}</h3>
-        <h3>Square: {{ squareCounter }}</h3>
-        <div>
-            <button @click="increment">+1</button>
-            <button @click="counter--">-1</button>
-        </div>
-    </section>
+    <Counter></Counter>
+    <SignUp></SignUp>
 </template>
 
 <script lang="ts" setup>
-    import {computed, ref} from 'vue';
+import Counter from './components/Counter.vue';
+import SignUp from './components/SignUp.vue';
 
-    const counter = ref(0);
-    const squareCounter = computed(() => counter.value * counter.value);
-
-    const increment = () => {
-        counter.value++;
-    }
-
-    const decrement = () => {
-        counter.value--;
-    }
-
+    
 </script>
 
-
-<style scoped>
-    h1 {
-        color: green
-    }
-</style>
